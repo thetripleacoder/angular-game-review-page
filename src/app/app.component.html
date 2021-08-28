@@ -1,0 +1,135 @@
+<div class="main-container bg-dark">
+  <div class="container">
+    <div class="row justify-content-center text-center pt-5">
+      <h1 class="text-light">GAME REVIEWS</h1>
+    </div>
+    <!-- <div [ngStyle]="{'background-image': getUrl()}"> -->
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-10 col-lg-6">
+        <div class="card mt-5">
+          <div class="m-5">
+            <h3>Rule of Invasion: Madheart</h3>
+            <hr />
+            <p>Leave a Review</p>
+
+            <!-- <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
+    <input type="text" ngModel name="name" placeholder="Full Name" />
+    <input type="email" ngModel name="email" placeholder="Email" />
+    <input type="text" ngModel name="rating" placeholder="Rating" />
+    <button>Get User Values</button>
+  </form> -->
+
+            <form
+              #simpleForm="ngForm"
+              (ngSubmit)="getValues(simpleForm.value)"
+              ngNativeValidate
+            >
+              <div class="">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label"
+                ></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Full Name"
+                  name="fullName"
+                  ngModel
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label"
+                ></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Email"
+                  name="email"
+                  ngModel
+                  required
+                />
+              </div>
+
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                name="rating"
+                ngModel
+                required
+              >
+                <option value="" disabled selected>Rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlTextarea1"
+                  class="form-label"
+                ></label>
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  placeholder="Review"
+                  name="review"
+                  ngModel
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-sm-12 col-md-10 col-lg-6">
+        <h3 class="text-light text-center">Reviews</h3>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-2">
+      <div class="col-sm-12 col-md-10 col-lg-6">
+        <div class="card border-bottom mb-3" *ngFor="let i of items">
+          <div class="m-3 ">
+            <div class="row">
+              <div class="col-3 align-self-center text-center">
+                <h1>
+                  {{i.rating}}
+                </h1>
+              </div>
+              <div class="col ">
+                <p>{{i.fullName}}</p>
+                <p>{{i.email}}</p>
+                <!-- <p>{{i.time | date: 'dd/MM/yyyy'}}</p> -->
+              </div>
+            </div>
+            <hr />
+            <div class="row text-center">
+              <p class="review-quote">" {{i.review}} "</p>
+            </div>
+
+            <!-- <p>Name: {{i.name}}</p>
+            <p>Email: {{i.email}}</p>
+
+            <p>Review: {{i.review}}</p>
+            <p>Review: {{i.time | date: 'dd/MM/yyyy'}}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div>
+    <input [(ngModel)]="newItem" type="text" placeholder="Add Review" />
+    <button (click)="pushItem()">Add</button>
+  </div> -->
+</div>

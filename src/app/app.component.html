@@ -19,71 +19,31 @@
     <button>Get User Values</button>
   </form> -->
 
-            <form
-              #simpleForm="ngForm"
-              (ngSubmit)="getValues(simpleForm.value)"
-              ngNativeValidate
-            >
+            <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)" ngNativeValidate>
               <div class="">
-                <label
-                  for="exampleFormControlInput1"
-                  class="form-label"
-                ></label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="Full Name"
-                  name="fullName"
-                  ngModel
-                  required
-                />
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Full Name"
+                  name="fullName" ngModel required />
               </div>
               <div class="mb-3">
-                <label
-                  for="exampleFormControlInput1"
-                  class="form-label"
-                ></label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="Email"
-                  name="email"
-                  ngModel
-                  required
-                />
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="email"
+                  ngModel required />
               </div>
 
-              <select
-                class="form-select"
-                aria-label="Default select example"
-                name="rating"
-                ngModel
-                required
-              >
+              <select class="form-select" aria-label="Default select example" name="rating" ngModel required>
                 <option value="" disabled selected>Rating</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
               </select>
 
               <div class="mb-3">
-                <label
-                  for="exampleFormControlTextarea1"
-                  class="form-label"
-                ></label>
-                <textarea
-                  class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                  placeholder="Review"
-                  name="review"
-                  ngModel
-                  required
-                ></textarea>
+                <label for="exampleFormControlTextarea1" class="form-label"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Review"
+                  name="review" ngModel required></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>

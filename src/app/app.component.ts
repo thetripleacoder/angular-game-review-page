@@ -6,10 +6,6 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  // items = ['Angular 4', 'React', 'Underscore'];
-
-  // newItem = '';
-
   items = [
     {
       fullName: 'Fern Castro',
@@ -44,23 +40,6 @@ export class AppComponent {
         '2 decades of gaming, this is the greatest game I have ever played and will ever play.',
     },
   ];
-
-  getValues(val) {
-    console.log(val);
-    // let time = new Date();
-    // val.time = time;
-    let newItem = val;
-    if (
-      newItem.fullName !== '' &&
-      newItem.email !== '' &&
-      newItem.rating !== '' &&
-      newItem.rating !== 'Rating' &&
-      newItem.review !== ''
-    ) {
-      this.items.unshift(newItem);
-    } else {
-    }
-  }
 
   getUrl() {
     return "url('http://estringsoftware.com/wp-content/uploads/2017/07/estring-header-lowsat.jpg')";

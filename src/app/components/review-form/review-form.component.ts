@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Review } from '../../review';
 
 @Component({
   selector: 'app-review-form',
@@ -7,6 +9,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ReviewFormComponent implements OnInit {
   @Input() items: any[];
+
+  review = new Review('', '', 0, '');
+
   getValues(val) {
     console.log(val);
 

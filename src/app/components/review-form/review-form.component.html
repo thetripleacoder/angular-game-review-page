@@ -30,31 +30,33 @@
                 <hr />
                 <p>Leave a Review</p>
 
-                <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)" ngNativeValidate>
-                    <div class="">
-                        <label for="exampleFormControlInput1" class="form-label"></label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Full Name"
-                            name="fullName" ngModel required />
+                <form #reviewForm="ngForm" (ngSubmit)="getValues(reviewForm.value)" ngNativeValidate>
+                    <div class="form-group">
+                        <label for="fullName" class="form-label"></label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Full Name" name="fullName"
+                            [(ngModel)]="review.fullName" required />
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label"></label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email"
-                            name="email" ngModel required />
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label"></label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email"
+                            [(ngModel)]="review.email" required />
                     </div>
+                    <div class="form-group">
 
-                    <select class="form-select" aria-label="Default select example" name="rating" ngModel required>
-                        <option value="" disabled selected>Rating</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label"></label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Review"
-                            name="review" ngModel required></textarea>
+                        <select class="form-select" aria-label="Default select example" name="rating"
+                            [(ngModel)]="review.rating" required>
+                            <option value="" disabled selected>Rating</option>
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="from-group mb-3">
+                        <label for="review" class="form-label"></label>
+                        <textarea class="form-control" id="review" rows="3" placeholder="Review" name="review"
+                            [(ngModel)]="review.review" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

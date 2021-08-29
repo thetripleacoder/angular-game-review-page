@@ -40,8 +40,4 @@ export class AppComponent {
         '2 decades of gaming, this is the greatest game I have ever played and will ever play.',
     },
   ];
-
-  getUrl() {
-    return "url('http://estringsoftware.com/wp-content/uploads/2017/07/estring-header-lowsat.jpg')";
-  }
 }

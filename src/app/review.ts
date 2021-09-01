@@ -1,8 +1,6 @@
-export class Review {
-  constructor(
-    public fullName: string,
-    public email: string,
-    public rating: number,
-    public review: string
-  ) {}
+export interface Review {
+  fullName: string;
+  email: string;
+  rating: number;
+  review: string;
 }

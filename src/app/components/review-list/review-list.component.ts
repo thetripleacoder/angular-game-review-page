@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./review-list.component.css'],
 })
 export class ReviewListComponent implements OnInit {
-  @Input() items: any[];
+  @Input() reviews: any[];
 
   constructor() {}
 

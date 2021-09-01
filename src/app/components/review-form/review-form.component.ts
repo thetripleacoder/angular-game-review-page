@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Review } from '../../review';
+import { Review } from '../../Review';
 
 @Component({
   selector: 'app-review-form',
@@ -8,9 +8,9 @@ import { Review } from '../../review';
   styleUrls: ['./review-form.component.css'],
 })
 export class ReviewFormComponent implements OnInit {
-  @Input() items: any[];
+  @Input() reviews: any[];
 
-  review = new Review('', '', 0, '');
+  // review = new Review('', '', 0, '');
 
   getValues(val) {
     console.log(val);
@@ -23,7 +23,7 @@ export class ReviewFormComponent implements OnInit {
       newItem.rating !== 'Rating' &&
       newItem.review !== ''
     ) {
-      this.items.unshift(newItem);
+      this.reviews.unshift(newItem);
     } else {
     }
   }

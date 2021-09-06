@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { Review } from '../../Review';
 
 @Component({
@@ -10,12 +10,10 @@ import { Review } from '../../Review';
 export class ReviewFormComponent implements OnInit {
   @Input() reviews: any[];
 
-  // review = new Review('', '', 0, '');
+  onSubmit(form: NgForm) {
+    console.log(form.value);
 
-  getValues(val) {
-    console.log(val);
-
-    let newItem = val;
+    let newItem = form.value;
     if (
       newItem.fullName !== '' &&
       newItem.email !== '' &&
@@ -26,6 +24,7 @@ export class ReviewFormComponent implements OnInit {
       this.reviews.unshift(newItem);
     } else {
     }
+    form.resetForm();
   }
 
   constructor() {}

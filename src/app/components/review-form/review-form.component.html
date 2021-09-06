@@ -30,7 +30,7 @@
                 <hr />
                 <p>Leave a Review</p>
 
-                <form #reviewForm="ngForm" (ngSubmit)="getValues(reviewForm.value)" ngNativeValidate>
+                <form #reviewForm="ngForm" (ngSubmit)="onSubmit(reviewForm)" ngNativeValidate>
                     <div class="form-group">
                         <label for="fullName" class="form-label"></label>
                         <input type="text" class="form-control" id="fullName" placeholder="Full Name" name="fullName"
@@ -57,7 +57,7 @@
                         <textarea class="form-control" id="review" rows="3" placeholder="Review" name="review" ngModel
                             required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type=" submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>

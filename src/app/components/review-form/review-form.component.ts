@@ -24,7 +24,9 @@ export class ReviewFormComponent implements OnInit {
       this.reviews.unshift(newItem);
     } else {
     }
-    form.resetForm();
+    form.resetForm({
+      rating: '',
+    });
   }
 
   constructor() {}
